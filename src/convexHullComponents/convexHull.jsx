@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import MyTimer from "./timer";
 import Canvas from "./canvas";
-import Navbar from "./navbar";
 import Menu from "./menu";
 class ConvexHull extends Component {
     state={
@@ -25,7 +24,6 @@ class ConvexHull extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
                 <Menu
                     onRefresh={this.handleRefreshDots}
                     onVisualize={this.handleVisualize}

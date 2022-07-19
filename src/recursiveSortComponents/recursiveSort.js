@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import Rect from "./rect";
 import Rects from "./rects";
 import mergeSort from '../algorithms/mergeSort';
 import heapSort from "../algorithms/heapSort";
 import {quickSortRecursive} from "../algorithms/quickSortRecursive";
-import Navbar from "./navbar";
 import Menu from "./menu";
 
 class RecursiveSort extends Component {
@@ -33,7 +31,6 @@ class RecursiveSort extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar/>
                 <Menu
                     disable={this.state.isRunning}
                     onViusalize={this.handleSort}

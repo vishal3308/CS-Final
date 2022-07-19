@@ -4,7 +4,7 @@ import "./style.css";
 class Footer extends Component {
     render() {
         return (
-            <footer class="page-footer font-small special-color-dark pt-4 ">
+            <footer className="page-footer font-small special-color-dark pt-4 ">
 
                 {/* <div className='flex-wrap' style={{textAlign:"center"}}>
                     {/* <div className='m-2'><GitHubButton href="https://github.com/TamimEhsan" data-show-count="true" aria-label="Follow @TamimEhsan on GitHub">Follow @TamimEhsan</GitHubButton></div>
@@ -15,7 +15,7 @@ class Footer extends Component {
                     <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"/> 
                 </div> */}
 
-                <div class="footer-copyright text-center py-3">© 2022 Copyright:
+                <div className="footer-copyright text-center py-3">© 2022 Copyright:
                     {/* <a href="https://github.com/tamimehsan" style={{color: "#65b6f0"}}> Tamim Ehsan</a> */}
                 </div>
 

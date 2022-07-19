@@ -1,21 +1,27 @@
 import React from 'react';
-import {HashRouter as Router, Routes, Route} from 'react-router-dom';
-// import { BrowserRouter  as Router,Route } from 'react-router-dom';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import './Style/modified.css';
 import Pathfinder from "./pathfinderComponents/pathfinder";
 import Home from "./homeComponents/home";
+import Navbar from './homeComponents/Navbar';
+import About from './homeComponents/about';
+import Login from './homeComponents/Login';
+import Signup from './homeComponents/Signup';
 // import Seive from "./primeComponents/seive";
-import Sort from "./sortComponents/sort";
 // import towerOfHanoi from "./towerOfHanoiComponents/util/towerApp";
+import Sort from "./sortComponents/sort";
 import Queen from "./queenComponents/queen";
 import ConvexHull from "./convexHullComponents/convexHull";
 import BinarySearch from "./binarySearchComponent/binarySearch";
 import RecursiveSort from "./recursiveSortComponents/recursiveSort";
-
+import { createContext } from 'react';
+export const Url = createContext();
 
     function App(){
         return (
-            // <BrowserRouter>
-            <Router>
+      <Url.Provider value={'http://localhost:4001'}>
+            <BrowserRouter>
+            <Navbar/>
                 <Routes>
                 <Route path='/pathfinder' element={<Pathfinder/>}/>
                     {/* <Route path='/prime' component={Seive}/> */}
@@ -25,15 +31,13 @@ import RecursiveSort from "./recursiveSortComponents/recursiveSort";
                     <Route path='/binarysearch' element={<BinarySearch/>}/>
                     <Route path='/recursivesort' element={<RecursiveSort/>}/>  
                     {/* <Route path='/towerOfHanoi' element={<towerOfHanoi/>}/> */}
+                    <Route path='/login' element={<Login/>}/>
+                    <Route path='/signup' element={<Signup/>}/>
+                    <Route path='/about' element={<About/>}/>
                     <Route path='/' element={<Home/>}/>
                 </Routes>
-              
-               
-                
-                   
-                
-            </Router>
-            // {/* </BrowserRouter> */}
+         </BrowserRouter>
+      </Url.Provider>
         );
     }
 

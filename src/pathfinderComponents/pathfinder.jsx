@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import Grid from "./grid";
-import Navbar from "./navbar";
 import Menu from "./menu";
 import {dijkstra,getNodesInShortestPathOrder} from "../algorithms/dijkstra";
 import {getMaze} from "../algorithms/recursiveMaze";
@@ -46,8 +45,6 @@ class Pathfinder extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar/>
-
                 <Menu
                     onAlgoChanged = {this.handleAlgoChanged}
                     onVisualize = {this.handleClick}

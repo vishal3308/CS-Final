@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import Rect from "./rect";
 import Rects from "./rects";
 import {bubbleSort,selectionSort,insertionSort} from "../algorithms/sortingAlgorithms";
 import {quickSort} from "../algorithms/quickSort";
-import Navbar from "./navbar";
 import Menu from "./menu";
 
 class Sort extends Component {
@@ -31,7 +29,6 @@ class Sort extends Component {
     render() {
     return (
         <React.Fragment>
-            <Navbar/>
             <Menu
                 disable={this.state.isRunning}
                 onDoubleChange={this.handleDouble}

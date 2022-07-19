@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Cells from "./cells";
-import Navbar from "./navbar";
 import Menu from "./menu";
 
 class Queen extends Component {
@@ -23,7 +22,6 @@ class Queen extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
                 <Menu
                     onSpeedChange={this.handleSpeedChange}
                     onCountChange={this.handleQueenChange}
